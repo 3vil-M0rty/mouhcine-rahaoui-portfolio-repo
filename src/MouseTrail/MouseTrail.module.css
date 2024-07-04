@@ -1,0 +1,22 @@
+.circle {
+    color: white;
+    pointer-events: none;
+    position: fixed;
+    height: 24px;
+    width: 24px;
+    transition: color 0.33s ease-in-out, height 0.33s ease-in-out, width 0.33s ease-in-out, font-size 0.33s ease-in-out, transform 0.33s ease-in-out;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.whiteIcon {
+    color: white;
+}
+
+.blackIcon {
+    color: black;
+    
+    height: 30px;
+    width: 30px;
+}

@@ -1,0 +1,280 @@
+@font-face {
+  font-family: 'Syncopate-Bold';
+  src: url('../src/assets/fonts/Syncopate/Syncopate-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('../src/assets/fonts/Roboto/Roboto-Regular.ttf');
+}
+
+body {
+  font-family: 'Syncopate-Bold', sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  overflow-x: hidden;
+  height: 9500px;
+}
+
+.profile {
+  position: absolute;
+  top: 120vh;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Mouhcine {
+  position: relative;
+  height: 200vh;
+  width: 95vw;
+  animation: widthProfile linear forwards;
+  animation-timeline: view();
+  animation-range: 0px 200vh;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+@keyframes widthProfile {
+  to {
+    width: 100vw;
+  }
+}
+
+.profile-section-one {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  z-index: 2;
+}
+
+.sec-2-container {
+  position: absolute;
+  top: 100vh;
+  background-color: white;
+}
+
+.profile-section-two {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.bg-sec-2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0vh;
+  margin: 0;
+  padding: 0;
+  width: 2%;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 500%;
+  border-top-right-radius: 0%;
+  background-color: black;
+  animation: bgWidth linear forwards;
+  animation-timeline: view();
+  animation-range: 0 90vh;
+}
+
+@keyframes bgWidth {
+  to {
+    width: 100%;
+    height: 100vh;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+  }
+}
+
+
+.profile-section-two p {
+  position: absolute;
+  top: 0;
+  left: 2%;
+  width: 40%;
+  font-size: 1.3rem;
+  font-family: 'Roboto-Regular', sans-serif;
+  color: white;
+  padding: 5px;
+  opacity: 0;
+  animation: opacityShow linear forwards;
+  animation-timeline: view();
+  animation-range: 100px 300px;
+}
+
+.profile-section-two p::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes opacityShow {
+  to {
+    opacity: 1;
+  }
+}
+
+.profile-pic {
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 400px;
+  object-fit: cover;
+  scale: 1;
+  animation: scaleIT linear forwards;
+  animation-timeline: view();
+  border-bottom-left-radius: 0;
+  animation-range: 0px 80vh;
+  mix-blend-mode: exclusion;
+  z-index: 3;
+}
+
+@keyframes scaleIT {
+  to {
+    left: 100%;
+    border-bottom-left-radius: 50%;
+  }
+}
+
+.profile-title {
+  position: sticky;
+  top: 500px;
+  width: 100vw;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  place-items: center;
+  padding: 0;
+  color: white;
+  z-index: 3;
+  mix-blend-mode: difference;
+}
+
+
+
+#first {
+  grid-area: 1 / 1 / 2 / 2; 
+  align-self: center;
+}
+
+#second {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.profile-title-pic {
+  width: 50%;
+}
+
+
+@keyframes scaleIt {
+  to {
+    scale: 1.1;
+  }
+}
+
+.ParentContainer {
+  display: flex;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  height: 100vh;
+  /* Ensure it takes full height for centering purposes */
+  position: relative;
+}
+
+.CardsContainer {
+  position: absolute;
+  top: 620vh;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr) minmax(0, 16.67%) minmax(0, 16.67%) minmax(0, 16.67%) repeat(3, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  opacity: 0.3;
+  scale: 0.6;
+  animation: FadeIn linear forwards;
+  /* Define duration, timing-function, and fill-mode */
+  animation-timeline: view();
+  animation-range: 200px 400px;
+  width: 95%;
+  height: 232vh;
+}
+
+@keyframes FadeIn {
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes blurIt {
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.card-1 {
+  grid-area: 1 / 1 / 4 / 3;
+  opacity: 0.8;
+  filter: blur(20px);
+  animation: blurIt linear forwards;
+  /* Define duration, timing-function, and fill-mode */
+  animation-timeline: view();
+  animation-range: 200px 400px;
+
+}
+
+.card-2 {
+  grid-area: 1 / 3 / 4 / 5;
+  opacity: 0.8;
+  filter: blur(20px);
+  animation: blurIt linear forwards;
+  /* Define duration, timing-function, and fill-mode */
+  animation-timeline: view();
+  animation-range: 200px 401px;
+}
+
+.card-3 {
+  grid-area: 1 / 5 / 4 / 7;
+  opacity: 0.8;
+  filter: blur(20px);
+  animation: blurIt linear forwards;
+  /* Define duration, timing-function, and fill-mode */
+  animation-timeline: view();
+  animation-range: 200px 402px;
+}
+
+.card-4 {
+  grid-area: 4 / 1 / 7 / 7;
+  opacity: 0.8;
+  filter: blur(20px);
+  animation: blurIt linear forwards;
+  /* Define duration, timing-function, and fill-mode */
+  animation-timeline: view();
+  animation-range: 200px 402px;
+}
+
+
+.card-7 {
+  grid-area: 7 / 1 / 10 / 3;
+}
+
+.card-5 {
+  grid-area: 7 / 3 / 10 / 5;
+}
+
+.card-6 {
+  grid-area: 7 / 5 / 10 / 7;
+}

@@ -1,0 +1,62 @@
+.zoomParent {
+    position: absolute;
+    top: 330vh;
+    height: 500vh;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 6;
+}
+
+.zoomContainer {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    max-height: 100vh;
+}
+
+.scrollSectionLeft {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 500vh;
+    will-change: transform;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    padding: 0;
+    /* animation: toLeft linear forwards;
+    animation-timeline: view();
+    animation-range: 120vh 500vh; */
+}
+
+.scrollSectionRight {
+    position: absolute;
+    top: 0;
+    right: 248%;
+    height: 100%;
+    width: 500vh;
+    will-change: transform;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 0;
+    animation: toRight linear forwards;
+    animation-timeline: view();
+    animation-range: 120vh 500vh;
+}
+
+@keyframes toLeft {
+    to {
+        left: -380%;
+    }
+}
+
+@keyframes toRight {
+    to {
+        right:-132%;
+    }
+}

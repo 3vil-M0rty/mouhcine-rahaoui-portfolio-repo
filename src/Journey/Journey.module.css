@@ -1,0 +1,23 @@
+.journeyContainer {
+    position: absolute;
+    top: 832vh;
+    background-color: black;
+    color: black;
+    height: 300vh;
+    width: 100vw;
+}
+
+
+.journeyBody {
+    position: relative;
+    height: 300vh;
+    width: 100vw;
+}
+
+.line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}

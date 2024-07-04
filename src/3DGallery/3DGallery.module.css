@@ -1,0 +1,75 @@
+.bgMenu {
+    position: absolute;
+    top: 845vh;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    z-index: 6;
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    grid-template-rows: 100%;
+    > * {
+        grid-area: 1 / 1;
+    }
+}
+
+.menu {
+    position: relative;
+    border-radius: 40px;
+    height: 70%;
+    width: 70%;
+    align-self: center;
+    justify-self: center;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.imgContainer {
+    position: absolute;
+    top: 0;
+    max-height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.content {
+    position: absolute;
+    bottom: 0%;
+    overflow: hidden;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    height: 50%;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    color: white;
+    text-align: center;
+    font-size: 0.7rem;
+    padding-block: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.playButton {
+    padding: 5px;
+    border: 1px solid black;
+    width: 20%;
+    border-radius: 70px;
+    cursor: pointer;
+}
+
+.threedcanvasContainer {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+}

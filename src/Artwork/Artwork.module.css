@@ -1,0 +1,61 @@
+.zoomImgContainer {
+    position: relative;
+    height: 100%;
+}
+
+.zoomImg {
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+}
+
+.zoomImgInfo {
+    position: absolute;
+    /* Ensure absolute positioning */
+    bottom: 0;
+    /* Adjust as needed */
+    left: 0;
+    /* Adjust as needed */
+    color: black;
+    height: 50%;
+    max-width: 50%;
+    backdrop-filter: blur(15px);
+    display: flex;
+    scale: 0.5;
+    transform-origin: bottom left;
+    border-top-right-radius: 40px;
+    transition: all 0.7s ease-in-out;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+    /* Adjust font size as needed */
+}
+
+.zoomImgTitle {
+    font-family: 'Syncopate-Bold';
+    font-weight: bolder;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.zoomImgDetail {
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: 1.2rem;
+}
+
+.zoomImgawSize {
+    width: calc(100% + 10px);
+    padding-block: 5px;
+    background-color: black;
+    color: white;
+}
+
+.zoomImgContainer:hover .zoomImgInfo {
+    scale: 1;
+}
